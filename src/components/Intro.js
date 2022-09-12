@@ -1,12 +1,10 @@
 import React from 'react'
 import './Intro.css'
 import smile from '../img/happyface2.png';
-import Navbar from './navbar/Navbar';
 
 const Intro = () => {
     return (
     <div className='intro'>
-        {/* <Navbar /> */}
         <div className='i-left'>
             <div className='i-left-wrapper'>
                 <h2 className='i-intro'>Hello, My name is</h2>
