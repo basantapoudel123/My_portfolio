@@ -7,14 +7,14 @@ const ProductList = () => {
         <div className='pro-list'>
             <div className="pl-texts">
                 <h1 className='pl-title'>
-                    Create & Delete. It's Lama.
+                    My Project List
                 </h1>
                 <p className='pl-desc'>
-                Lama Dompin is a carefully crafted portfolio 
-                template for freelance creatives. The design is
-                 made in a clean style, which makes the website 
-                 memorable.Alternatively, you can contact me directly
-                  by email or send your message on the Support Tab.
+                Here are my project List. I provide 
+                Github link of every project which I
+                have completed from beginning of my learning 
+                process. You can visit my all repository in Github.
+                Some project I have done are listed below.
                 </p>
             </div>
             <div className="pl-list">

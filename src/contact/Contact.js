@@ -34,7 +34,7 @@ const Contact = () => {
             <div className="c-bg"></div>
             <div className="c-wrapper">
                 <div className="c-left">
-                    <h1 className='c-title'>Let's discuss my Project</h1>
+                    <h1 className='c-title'>Contact Me</h1>
                     <div className="c-info">
                         <div className="c-info-item">
                             <img 
@@ -61,7 +61,7 @@ const Contact = () => {
                 </div>
                 <div className="c-right">
                     <p className="c-desc">
-                        <b>What's your story?</b>
+                        <b>What's your story?</b><br/>
                         Get in touch.Always do react developer job well.
                         Work hard and get the right result using different 
                         features provided by react.

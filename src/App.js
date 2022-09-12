@@ -4,7 +4,7 @@ import About from './components/about/About';
 import ProductList from './components/productList/ProductList';
 import Contact from './contact/Contact';
 import Toggle from './toggle/Toggle';
-import { useContext, useState } from 'react';
+import { useContext} from 'react';
 import { ThemeContext } from './context';
 import Navbar from './components/navbar/Navbar';
 
