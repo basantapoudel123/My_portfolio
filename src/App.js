@@ -6,6 +6,7 @@ import Contact from './contact/Contact';
 import Toggle from './toggle/Toggle';
 import { useContext, useState } from 'react';
 import { ThemeContext } from './context';
+import Navbar from './components/navbar/Navbar';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div style={{backgroundColor: darkMode ? "#222" : "white",
                  color: darkMode && "white"
                 }}> 
+        {/* <Navbar /> */}
         <Toggle />
         <Intro />
         <About />

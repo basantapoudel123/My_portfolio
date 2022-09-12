@@ -24,14 +24,15 @@ const About = () => {
                     that everything is running smoothly.
                 </p>
                 <p className="a-desc">
-                    React Developer Tools is a Chrome DevTools extension for the 
-                    open-source React JavaScript library. It allows you to inspect
-                    the React component hierarchies in the Chrome Developer Tools.
-                    We will get two new tabs in your Chrome DevTools: "⚛️ Components"
-                    and "⚛️ Profiler".
-                    React makes it painless to create interactive UIs. Design simple 
-                    views for each state in your application, and React will efficiently
-                    update and render just the right components when your data changes.
+                    I used React as my primary programming language. React (also known as React.js 
+                    or ReactJS) is a free and open-source front-end 
+                    JavaScript library for building user interfaces based on UI components. It 
+                    is maintained by Meta (formerly Facebook) and a community of individual developers
+                     and companies. React can be used as a base in the development of single-page,
+                      mobile, or server-rendered applications with frameworks like Next.js. However, 
+                      React is only concerned with state management and rendering that state to the DOM, 
+                      so creating React applications usually requires the use of additional libraries for 
+                      routing, as well as certain client-side functionality.
                 </p>
             </div>
         </div>

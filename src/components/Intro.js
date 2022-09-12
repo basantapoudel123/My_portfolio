@@ -1,10 +1,12 @@
 import React from 'react'
 import './Intro.css'
 import smile from '../img/happyface2.png';
+import Navbar from './navbar/Navbar';
 
 const Intro = () => {
     return (
     <div className='intro'>
+        {/* <Navbar /> */}
         <div className='i-left'>
             <div className='i-left-wrapper'>
                 <h2 className='i-intro'>Hello, My name is</h2>
@@ -12,15 +14,16 @@ const Intro = () => {
                 <div className="i-title">
                     <div className="i-title-wrapper">
                         <div className="i-item-title">Web Developer</div>
-                        <div className="i-item-title">UI UX Designer</div>
+                        <div className="i-item-title">UI/UX Designer</div>
                         <div className="i-item-title">System Analyst</div>
-                        <div className="i-item-title">Mobile Developer</div>
+                        <div className="i-item-title">Frontend Developer</div>
+                        <div className="i-item-title">System Designer</div>
                     </div>
                 </div>
                 <p className="i-desc">
-                    I design and develop all types of WebApp.
-                    I can style, manage,animate,etc the web using
-                    different types of web services available.
+                    I design and develop all types of Website using different
+                    frontend technology. I can style, manage,animate the web using
+                    Reactjs, redux, hooks, Material UI,etc.
                 </p>
             </div>
         </div>
