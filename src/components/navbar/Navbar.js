@@ -1,41 +1,34 @@
-import React from 'react'
-
+import React from "react";
+import "./navbar.css";
 
 const Navbar = () => {
-    return (
-        <>
-        {/* <div className="container-fluid nav_bg">
-            <div className="row">
-                <div className="col-10 mx-auto"> */}
-                    <nav class="navbar navbar-expand-lg bg-light">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="#">Navbar</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
-                                </li>
-                            </ul>
-                            </div>
-                        </div>
-                        </nav>
-                    {/* </div>
-                </div>
-        </div> */}
-        </>
-    )
-}
+  return (
+    <>
+      <div className="nav-link">
+        <ul>
+          <li>
+            <div
+              onClick={() => {
+                const intro = document.querySelector("#introId");
+                intro?.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}
+            >
+              Home
+            </div>
+          </li>
+          <li>
+            <a href="/aboutus">About</a>
+          </li>
+          <li>
+            <a href="/product">Project</a>
+          </li>
+          <li>
+            <a href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

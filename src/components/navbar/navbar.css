@@ -1,0 +1,35 @@
+.nav-link {
+    background-color: rgb(243, 240, 235);
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 200;
+
+}
+
+ul {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+li {
+    float: left;
+    list-style: none;
+    margin: 0px 20px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+ul li a {
+    padding: 3px 3px;
+    text-decoration: none;
+    font-size: 26;
+    /* text-transform: uppercase; */
+    color: #20c997;
+    font-size: 20px;
+    font-weight: bold;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif */
+}
