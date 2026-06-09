@@ -1,14 +1,14 @@
+import { useContext } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Intro from "./components/Intro";
 import About from "./components/about/About";
+import Experience from "./components/experience/Experience";
+import Navbar from "./components/navbar/Navbar";
 import ProductList from "./components/productList/ProductList";
 import Contact from "./contact/Contact";
-import Toggle from "./toggle/Toggle";
-import { useContext } from "react";
 import { ThemeContext } from "./context";
-import Navbar from "./components/navbar/Navbar";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -22,10 +22,10 @@ function App() {
       }}
     >
       <Navbar />
-      <Toggle />
       <Intro />
       <ToastContainer />
       <About />
+      <Experience />
       <ProductList />
       <Contact />
     </div>

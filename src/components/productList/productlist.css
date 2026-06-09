@@ -7,7 +7,7 @@
 }
 
 .pl-texts {
-    width: 65%;
+    width: 75%;
 }
 
 .pl-title {
@@ -20,10 +20,12 @@
 }
 
 .pl-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    gap: 32px;
+    grid-column: auto-fit;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     width: 100%;
+    margin-top: 24px;
 }
 
 @media screen and (max-width: 480px) {
@@ -35,5 +37,9 @@
     }
     .pl-desc{
         display: none;
+    }
+    .pl-list{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin: 24px 12px 0px 32px;
     }
 }

@@ -1,15 +1,14 @@
 .pro {
-    width: 30%;
+    width: 100%;
     height: 40vh;
-    margin: 20px 10px;
-    border: 2px solid rgb(243, 242, 242);
-    border-radius: 10px 10px 0px 0px;
+    border: 2px solid rgb(221, 214, 214);
+    border-radius: 10px 10px 4px 4px;
     overflow: hidden;
 }
 
 .p-browser {
     height: 20px;
-    background-color: rgb(243, 242, 242);
+    background-color: rgb(221, 214, 214);
     display: flex;
     align-items: center;
     position: sticky;
@@ -21,14 +20,15 @@
     height: 6px;
     border-radius: 50%;
     margin: 3px;
-    background-color: white;
+    background-color: rgb(144, 130, 130);
 }
 
 .p-img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: all 10s ease;
+    background-color: transparent;
 }
 
 .p:hover .p.img{
@@ -37,7 +37,7 @@
 
 @media screen and (max-width: 480px) {
     .pro {
-      width: 40%;
+      width: 80%;
       height: 20vh;
     }
 }

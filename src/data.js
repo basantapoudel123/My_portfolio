@@ -1,32 +1,32 @@
 export const products = [
   {
     id: 1,
-    img: "img/coder2.jpg",
+    img: "img/react.png",
     link: "https://github.com/basantapoudel123",
   },
   {
     id: 2,
-    img: "img/coder2.jpg",
+    img: "img/node.webp",
     link: "https://github.com/basantapoudel123",
   },
   {
     id: 3,
-    img: "img/coder3.jpg",
+    img: "img/mongodb.png",
     link: "https://github.com/basantapoudel123",
   },
   {
     id: 4,
-    img: "img/coder4.jpg",
+    img: "img/tailwind.png",
     link: "https://github.com/basantapoudel123",
   },
   {
     id: 5,
-    img: "img/coder5.jpg",
+    img: "img/ts.png",
     link: "https://github.com/basantapoudel123",
   },
   {
     id: 6,
-    img: "img/coder1.jpg",
+    img: "img/express.png",
     link: "https://github.com/basantapoudel123",
   },
 ];

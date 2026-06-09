@@ -1,29 +1,90 @@
 .t {
-    width: 50px;
-    height: 25px;
-    border-radius: 20px;
-    border: 1px solid #999;
-    background-color: white;
+    width: 72px;
+    height: 36px;
+    border-radius: 999px;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 18px;
+    right: 18px;
     z-index: 999;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-
-.t-icon {
-    width: 15px;
-    height: 15px;
-}
-
-.t-button {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #999;
-    position: absolute;
+    justify-content: space-between;
+    padding: 0 6px;
     cursor: pointer;
-    right: 0;
+    transition: all 0.35s ease;
+
+    /* cleaner base */
+    background: #eef1f4;
+    border: 1px solid #d0d7de;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* DARK MODE TRACK */
+.t.dark {
+    background: #1b1b1b;
+    border: 1px solid #2a2a2a;
+}
+
+/* ICONS (FIXED) */
+.t-icon {
+    font-size: 14px;
+    z-index: 2;
+    margin: 0px 2px;
+
+    /* REMOVE BOX (this was causing ugliness) */
+    background: transparent;
+    opacity: 0.8;
+    transition: all 0.25s ease;
+}
+
+.t:hover .t-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* SUN COLOR FIX */
+.t-icon:first-child {
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+}
+
+/* MOON COLOR FIX */
+.t-icon:last-child {
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+}
+
+/* THUMB */
+.t-button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* MOVE */
+.t-button.move {
+    transform: translateX(36px);
+}
+
+/* DARK THUMB */
+.t.dark .t-button {
+    background: linear-gradient(135deg, #20c997, #0ea5e9);
+    box-shadow: 0 0 12px rgba(32,201,151,0.4);
+}
+
+/* HOVER */
+.t:hover {
+    transform: scale(1.05);
+}
+
+/* ACTIVE PRESS FEEL */
+.t:active .t-button {
+    transform: scale(0.95);
 }

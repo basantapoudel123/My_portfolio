@@ -1,35 +1,115 @@
+.logo-wrapper{
+    display: block;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    z-index: 200;
+}
+
+/* Navbar Container */
 .nav-link {
-    background-color: rgb(243, 240, 235);
     width: 100%;
-    height: 40px;
+    height: 70px;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 200;
 
-}
-
-ul {
-    overflow: auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-li {
-    float: left;
-    list-style: none;
-    margin: 0px 20px;
-    text-align: center;
+/* UL */
+.nav-link ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
-ul li a {
-    padding: 3px 3px;
+/* LI */
+.nav-link li {
+    list-style: none;
+}
+
+/* Nav Links */
+.nav-ele {
+    position: relative;
     text-decoration: none;
-    font-size: 26;
-    /* text-transform: uppercase; */
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #222;
+
+    transition: all 0.3s ease;
+
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.nav-ele:hover {
     color: #20c997;
-    font-size: 20px;
-    font-weight: bold;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif */
+}
+
+/* Animated Underline */
+.nav-ele::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0%;
+    height: 3px;
+
+    background-color: #20c997;
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+.nav-ele:hover::after {
+    width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .logo-wrapper{
+        display: none;
+    }
+
+    .nav-link ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 16px;
+        gap: 20px;
+    }
+
+    .nav-ele {
+        font-size: 14px;
+    }
+}
+
+
+/* ACTIVE NAV */
+
+.active-nav {
+    color: #20c997 !important;
+}
+
+.active-nav::after {
+    width: 100% !important;
 }

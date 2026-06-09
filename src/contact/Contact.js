@@ -1,11 +1,8 @@
-import "./contact.css";
-import Phone from "../img/phone.png";
-import Email from "../img/email.png";
-import Address from "../img/address.png";
-import { useContext, useRef, useState } from "react";
-import { ThemeContext } from "../context";
 import emailjs from "@emailjs/browser";
+import { useContext, useRef, useState } from "react";
 import { toast } from "react-toastify";
+import { ThemeContext } from "../context";
+import "./contact.css";
 
 const Contact = () => {
   const formRef = useRef();
@@ -21,8 +18,6 @@ const Contact = () => {
   const darkMode = theme.state.darkMode;
 
   const handleInput = (e) => {
-    console.log(e.target.name);
-    console.log(e.target.value);
     setUserRegister({ ...userRegister, [e.target.name]: e.target.value });
   };
 
@@ -48,29 +43,29 @@ const Contact = () => {
         });
       })
       .catch((err) => {
-        console.log("err");
+        console.log("err", err);
         setDisabled(false);
       });
   };
 
   return (
-    <div className="con">
+    <div id="contactId" className="con">
       <div className="c-bg"></div>
       <div className="c-wrapper">
         <div className="c-left">
           <h1 className="c-title">Contact Me</h1>
           <div className="c-info">
             <div className="c-info-item">
-              <img src={Phone} alt="" className="c-icon" />
-              +123456789
+              <img src="../../img/phone.png" alt="" className="c-icon" />
+              +977 9806706686
             </div>
             <div className="c-info-item">
-              <img src={Email} alt="" className="c-icon" />
-              contact@gmai.com
+              <img src="../../img/email.png" alt="" className="c-icon" />
+              basanta.poudel1221@gmail.com
             </div>
             <div className="c-info-item">
-              <img src={Address} alt="" className="c-icon" />
-              214 Sarswati Marga,Balkumari-8,Lalitpur
+              <img src="../../img/address.png" alt="" className="c-icon" />
+              Balkumari-8, Lalitpur, Nepal
             </div>
           </div>
         </div>
@@ -83,7 +78,7 @@ const Contact = () => {
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
             <input
-              style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333", color: darkMode && "white", borderColor: darkMode && "lightgray", borderWidth: "1px" }}
               type="text"
               required
               autoComplete="off"
@@ -93,7 +88,7 @@ const Contact = () => {
               value={userRegister.user_name}
             />
             <input
-              style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333", color: darkMode && "white", borderColor: darkMode && "lightgray", borderWidth: "1px" }}
               type="text"
               required
               autoComplete="off"
@@ -103,24 +98,24 @@ const Contact = () => {
               value={userRegister.user_subject}
             />
             <input
-              style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333", color: darkMode && "white", borderColor: darkMode && "lightgray", borderWidth: "1px" }}
               type="text"
               required
               autoComplete="off"
-              placeholder="email"
+              placeholder="Email"
               name="user_email"
               onChange={handleInput}
               value={userRegister.user_email}
             />
             <textarea
-              style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333", color: darkMode && "white", borderColor: darkMode && "lightgray", borderWidth: "1px" }}
               rows="5"
               placeholder="Message"
               name="message"
               onChange={handleInput}
               value={userRegister.message}
             />
-            <button disabled={disabled} type="submit">
+            <button disabled={disabled} type="submit" className="c-btn">
               Submit
             </button>
           </form>

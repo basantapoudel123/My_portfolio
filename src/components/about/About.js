@@ -1,35 +1,39 @@
 import "./about.css";
-import coder1 from "../../img/coder5.jpg";
 
 const About = () => {
   return (
-    <div className="about">
+    <div id="aboutId" className="about">
       <div className="a-left">
-        <div className="a-card bg"></div>
+        <div className="a-card bg">
+          <img src="../../img/scene1.jpg" alt="" className="a-img" />
+
+        </div>
         <div className="a-card">
-          <img src={coder1} alt="" className="a-img" />
+          <img src="../../img/mountainview.jpg" alt="" className="a-img" />
         </div>
       </div>
 
       <div className="a-right">
         <h1 className="a-title">About Me</h1>
+
         <p className="a-sub">
-          As a Programmer,I write code for computer programs and mobile
-          applications. They also are involved in maintaining, debugging and
-          troubleshooting systems and software to ensure that everything is
-          running smoothly.
+          I am a Software Engineer with 3+ years of experience building scalable
+          and high-performance web applications, specializing in frontend
+          development and real-time systems.
         </p>
+
         <p className="a-desc">
-          I used React as my primary programming language. React (also known as
-          React.js or ReactJS) is a free and open-source front-end JavaScript
-          library for building user interfaces based on UI components. It is
-          maintained by Meta (formerly Facebook) and a community of individual
-          developers and companies. React can be used as a base in the
-          development of single-page, mobile, or server-rendered applications
-          with frameworks like Next.js. However, React is only concerned with
-          state management and rendering that state to the DOM, so creating
-          React applications usually requires the use of additional libraries
-          for routing, as well as certain client-side functionality.
+          I have worked at Smart Ideas Pvt. Ltd. (Hamro Patro), contributing to
+          large-scale systems like E-commerce platforms, CMS systems, payment
+          systems, and Jyotish-related applications. My work includes building
+          dynamic page builders, managing order workflows, and integrating
+          payment and real-time features.
+
+          <br /><br />
+
+          I mainly use React.js, Svelte, TypeScript, and Redux Toolkit, along
+          with REST APIs, WebSockets, and tools like Git and Firebase. I enjoy
+          building scalable, maintainable, and user-focused applications.
         </p>
       </div>
     </div>
