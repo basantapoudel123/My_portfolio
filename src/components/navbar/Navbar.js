@@ -63,43 +63,43 @@ const Navbar = () => {
       <ul>
 
         <li>
-          <a
+          <button
             className={`nav-ele ${activeNav === "introId" ? "active-nav" : ""
               }`}
             onClick={() => scrollToSection("introId")}
           >
             Home
-          </a>
+          </button>
         </li>
 
         <li>
-          <a
+          <button
             className={`nav-ele ${activeNav === "aboutId" ? "active-nav" : ""
               }`}
             onClick={() => scrollToSection("aboutId")}
           >
             About
-          </a>
+          </button>
         </li>
 
         <li>
-          <a
+          <button
             className={`nav-ele ${activeNav === "productId" ? "active-nav" : ""
               }`}
             onClick={() => scrollToSection("productId")}
           >
             Projects
-          </a>
+          </button>
         </li>
 
         <li>
-          <a
+          <button
             className={`nav-ele ${activeNav === "contactId" ? "active-nav" : ""
               }`}
             onClick={() => scrollToSection("contactId")}
           >
             Contact
-          </a>
+          </button>
         </li>
 
       </ul>

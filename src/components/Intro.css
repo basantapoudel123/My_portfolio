@@ -92,6 +92,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    align-items: center;
 }
 
 .i-tags span {
@@ -101,6 +102,7 @@
     border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .i-right {
@@ -188,6 +190,45 @@
         width: 230px;
         height: 300px;
     }
+
+    
+    .i-title {
+        height: 32px;
+    }
+
+    .i-item-title {
+        height: 32px;
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    @keyframes move {
+
+        0%,
+        20% {
+            transform: translateY(0);
+        }
+
+        25%,
+        40% {
+            transform: translateY(-32px);
+        }
+
+        45%,
+        60% {
+            transform: translateY(-64px);
+        }
+
+        65%,
+        80% {
+            transform: translateY(-96px);
+        }
+
+        85%,
+        100% {
+            transform: translateY(-128px);
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -204,6 +245,38 @@
         width: 180px;
         height: 240px;
         border-radius: 18px;
+    }
+
+    .i-title-wrapper {
+        animation: none;
+        transform: none;
+    }
+
+    .i-title {
+        height: auto;
+        overflow: visible;
+    }
+
+    .i-name {
+        font-size: 30px;
+    }
+
+    .i-item-title {
+        font-size: 16px;
+    }
+
+    .i-desc {
+        font-size: 14px;
+    }
+
+    .i-tags {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .i-tags span {
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
 
@@ -253,12 +326,15 @@
     .i-tags {
         justify-content: center;
     }
-}
 
-@media screen and (max-width: 480px) {
     .i-title-wrapper {
-        animation: none;
-        transform: none;
+        animation: none !important;
+        transform: none !important;
+    }
+
+    /* Hide all except first item */
+    .i-item-title:not(:first-child) {
+        display: none;
     }
 
     .i-title {
@@ -266,20 +342,9 @@
         overflow: visible;
     }
 
-    .i-name {
-        font-size: 30px;
-    }
-
     .i-item-title {
-        font-size: 16px;
-    }
-
-    .i-desc {
-        font-size: 14px;
-    }
-
-    .i-tags span {
-        font-size: 12px;
-        padding: 5px 10px;
+        font-size: 18px;
+        justify-content: center;
+        color: #59b595;
     }
 }

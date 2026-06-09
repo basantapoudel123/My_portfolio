@@ -45,6 +45,10 @@
 
 /* Nav Links */
 .nav-ele {
+    background: transparent;
+    border: none;
+    outline: none;
+
     position: relative;
     text-decoration: none;
     font-size: 16px;
