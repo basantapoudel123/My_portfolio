@@ -21,15 +21,75 @@ const Contact = () => {
     setUserRegister({ ...userRegister, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+
+    const { user_name, user_subject, user_email, message } =
+      userRegister;
+
+    // NAME
+    if (!user_name.trim()) {
+      toast.error("Name is required");
+      return false;
+    }
+
+    if (user_name.trim().length < 3) {
+      toast.error("Name must be at least 3 characters");
+      return false;
+    }
+
+    // SUBJECT
+    if (!user_subject.trim()) {
+      toast.error("Subject is required");
+      return false;
+    }
+
+    if (user_subject.trim().length < 5) {
+      toast.error("Subject must be at least 5 characters");
+      return false;
+    }
+
+    // EMAIL
+    if (!user_email.trim()) {
+      toast.error("Email is required");
+      return false;
+    }
+
+    const emailRegex =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(user_email)) {
+      toast.error("Invalid email address");
+      return false;
+    }
+
+    // MESSAGE
+    if (!message.trim()) {
+      toast.error("Message is required");
+      return false;
+    }
+
+    if (message.trim().length < 10) {
+      toast.error("Message must be at least 10 characters");
+      return false;
+    }
+
+    return true;
+  };
+
+
   const handleSubmit = (e) => {
-    setDisabled(true);
     e.preventDefault();
+
+    const isValid = validateForm();
+    if (!isValid) return;
+    setDisabled(true);
+
     emailjs
       .sendForm(
         "service_ymkm9sm",
         "template_blfe1pq",
         formRef.current,
-        "xRFFe4bGiubMQDw3x"
+        "agoBnog-Qz1Gp2Zk0"
       )
       .then((result) => {
         toast.success("Thank You....");
