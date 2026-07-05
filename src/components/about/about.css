@@ -58,10 +58,9 @@
     .about {
         flex-direction: column;
         text-align: center;
-        margin-top: 50px;
     }
     .a-left {
-        width: 100%;
+        display: none;
     }
     .a-card{
         height: 30vh;
